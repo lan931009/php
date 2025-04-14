@@ -1,14 +1,24 @@
 <html>
     <head>
+        <!-- 設定網頁的編碼為 UTF-8，避免中文字亂碼 -->
         <meta charset="utf-8" />
+        <!-- 設定網頁標題 -->
         <title>登入範例</title>
     </head>
     <body>
+        <!-- 建立一個表單，使用 POST 方法送出到 2.login.php 進行驗證 -->
         <form method=post action="2.login.php">
+            <!-- 輸入帳號的欄位，name 為 id，送出時會變成 $_POST["id"] -->
             帳號：<input type=text name="id"><br />
+
+            <!-- 輸入密碼的欄位，name 為 pwd，送出時會變成 $_POST["pwd"] -->
             密碼：<input type=password name="pwd"><p></p>
-            <input type=submit value="登入"> <input type=reset value="清除">
+
+            <!-- 送出按鈕，按下後送出表單 -->
+            <input type=submit value="登入"> 
             
+            <!-- 清除按鈕，按下後會清空所有欄位 -->
+            <input type=reset value="清除">
         </form>
     </body>
 </html>
